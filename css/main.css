@@ -1,0 +1,15 @@
+.Intro {
+  background-image: url("./img/slide-bg-complexity.jpg");
+}
+
+.solutions {
+  background-color: hsla(199,56%,49%,1);
+}
+
+.success-stories {
+  background-color: hsla(0,0,93%,1);
+}
+
+footer {
+  background-color: hsla(0,0,15%,1)
+}
