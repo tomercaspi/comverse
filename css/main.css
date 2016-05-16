@@ -1,4 +1,5 @@
 html{
+  font-family: 'Open Sans', sans-serif;
   font-size: 100%;
   font-weight: normal;
 }
@@ -11,18 +12,68 @@ html{
   display:float;
 }
 
-.Intro {
-  background-image: url("./../img/slide-bg-complexity.jpg");
+.slider {
+  background-image: url("./../img/slider/custom-experience.jpg");
+  /*background-position: center;*/
+  color: white;
+}
+
+.slider h1{
+  font-size: 2rem;
+}
+
+.slider-box {
+  display: inline-block;
+  border-radius: 6px;
+  width: 16.2rem;
+  height: 7.8rem;
+  margin: 4rem 3rem 2rem 0;
+  padding: 2rem 1rem 1rem 1rem;
+  color: white;
+}
+
+.sPink {
+  background-color: hsla(330,97%,63%,1);
+}
+
+.sGreen {
+  background-color: hsla(100,53%,50%,1);
+}
+
+.sOrange {
+  background-color: hsla(24,100%,55%,1);
+}
+
+.inline-display li {
+  display: inline-block;
+  position: center;
+}
+
+.solutions li a{
+  text-decoration: none;
+  color: white;
 }
 
 .solutions {
   background-color: hsla(199,56%,49%,1);
 }
 
+.solutions ul li {
+  width: 10rem;
+}
 .success-stories {
   background-color: hsla(0,0,93%,1);
 }
 
+.events {
+  background-image: url("./../img/backgrounds/news-and-events-bg.jpg");
+}
+
+.event-list {
+  display: block;
+  width: 20rem;
+  height: 7rem;
+}
 footer {
   background-color: hsla(0,0,15%,1)
 }
