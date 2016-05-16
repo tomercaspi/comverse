@@ -3,6 +3,14 @@ html{
   font-weight: normal;
 }
 
+.container {
+  margin: 0 20rem;
+}
+
+.navbar-logo {
+  display:float;
+}
+
 .Intro {
   background-image: url("./../img/slide-bg-complexity.jpg");
 }
