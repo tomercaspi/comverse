@@ -12,9 +12,18 @@ html{
   display:float;
 }
 
+.page-options li{
+   text-decoration: none;
+}
+
 .slider {
   display: block;
   color: white;
+}
+.search-Box {
+  display: block;
+  float: right;
+  width: 5rem;
 }
 
 #image_1 {
@@ -86,6 +95,19 @@ html{
   position: center;
 }
 
+.navbar-logo {
+  float: left;
+}
+
+.navbar-headers a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.navbar-headers img {
+  margin: 0 1rem;
+}
 .solutions li a{
   text-decoration: none;
   color: white;
