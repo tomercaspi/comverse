@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/main.css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,800,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300, 400,600,700' rel='stylesheet' type='text/css'>
   <!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <title>Comverse</title>
@@ -47,7 +47,7 @@
   <main>
     <article>
       <!-- First Section - Introduction - Slider Images -->
-      <section class="slider">
+      <section class="container slider">
         <div class="image-holder">
          <!--  <span id="image_1"></span>
           <span id="image_2"></span>
@@ -69,16 +69,16 @@
 
         <article>
           <section class="slider-box sPink">
-            <h3>Comverse Is Value-Added Service Global Market Leader</h3>
+            <h2 class="small-title">Comverse Is Value-Added Service Global Market Leader</h2>
             <!-- <a href="#"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> Read more</a> -->
             <a href="#"><img src=".\img\icons\link-icon-image.png" alt="Read More"> Read More</a>
           </section>
           <section class="slider-box sGreen">
-            <h3>Managed Services World Congress September 18-19 Berlin, Germany</h3>
+            <h2 class="small-title">Managed Services World Congress September 18-19 Berlin, Germany</h2>
             <a href="#"><img src="" alt="Read More"> Read more</a>
           </section>
           <section class="slider-box sOrange">
-            <h3>Comverse: Enabling a world of Conected Possibilities</h3>
+            <h2 class="small-title">Comverse: Enabling a world of Conected Possibilities</h2>
             <!-- <a href="#"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> Watch now</a> -->
             <a href="#"><img src="" alt="Watch Now"> Watch Now</a>
           </section>
@@ -88,7 +88,8 @@
 
     <!-- Second section - Key Solutions -->
     <section class="solutions">
-      <h2>WHAT CAN WE DO FOR YOU?</h2>
+      <div class="container">
+      <h2 class="medium-title">WHAT CAN WE DO FOR YOU?</h2>
       <ul class="inline-display">
         <li>
           <a href="#">
@@ -122,11 +123,12 @@
         </li>     
       </ul>
       <button class="btn btn-primary">See all of our solutions</button>
+      </div>
     </section>
 
     <!-- Third section - News and Events -->
     <section class="events">
-      <h3>WHAT'S HAPPENING AT COMVERSE?</h3>
+      <h2 class="medium-title">WHAT'S HAPPENING AT COMVERSE?</h2>
       <ul class="inline-display">
         <li>
           <article class="event-list">
@@ -177,7 +179,7 @@
 
     <!-- Forth section - Success stories -->
     <section class="success-stories">
-      <h3>SUCCESS STORIES</h3>
+      <h2 class="medium-title">SUCCESS STORIES</h2>
       <button class="btn btn-primary">All 256 Success Stories</button>
     </section>
 
@@ -222,17 +224,13 @@
         </ul>
       </div>
 
-      <address>
-        <p class="copyright">
-          Copyright &copy 2012 Comverse, Inc | Privacy Policy
-        </p>
-      </address>
+     
 
       <aside>
         <section>
           <h4>LATEST BLOG POSTS</h4>
           <a href="">
-            <img src="#" alt="Date image">
+            <p class="Date-box">29<span>AUG</span></p>
             <p class="event-font">Comverse Regains Lead in Convergent Charging Market</p>
           </a>
         </section>
@@ -251,8 +249,14 @@
         <a href="https://www.linkedin.com/company/comverse-technology-inc-">
           <img src=".\img\social\socialMenuIcon-linkdin.png" alt="Linkedin link">
         </a>
+      </aside> 
 
-      </aside>
+      <address>
+        <p class="copyright">
+          Copyright &copy 2012 Comverse, Inc | Privacy Policy
+        </p>
+      </address>
+
     </div>
   </footer>
 </body>

@@ -5,15 +5,15 @@ html{
 }
 
 .container {
-  margin: 0 20rem;
+  margin: auto 20rem;
 }
 
 .navbar-logo {
-  display:float;
+  float: left;
 }
 
-.page-options li{
-   text-decoration: none;
+.page-options li, .solution-links li, .products_services-links li, .company-links li{
+   list-style: none;
 }
 
 .slider {
@@ -53,18 +53,17 @@ html{
   width: 16.2rem;
   height: 7.8rem;
   margin: 4rem 3rem 2rem 0;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 1rem;
   color: white;
 }
 
-.button-slider
-        {
-            display: inline-block;
-            height: 10px;
-            width: 10px;
-            border-radius: 5px;
-            background-color: gray;
-        }
+.button-slider {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: gray;
+}
 
 .sPink {
   background-color: hsla(330,97%,63%,0.8);
@@ -114,18 +113,48 @@ html{
 }
 
 .solutions {
+  background: url("./../img/backgrounds/solutions-bg.png");
   background-color: hsla(199,56%,49%,1);
+  height: 26.5rem;
 }
 
 .solutions ul li {
   width: 10rem;
+  margin: 2rem 0.5rem;
+  text-align: center;
+  align-items: center;
 }
+
+.medium-title {
+  color: white;
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.small-title {
+  color: white;
+  font-weight: 300;
+  font-size: 1.3rem;
+  margin: 0 0 1rem 0;
+  /*text-align: left;*/
+}
+
 .success-stories {
-  background-color: hsla(0,0,93%,1);
+  background-color: rgb(236,236,236);
+  height: 35.75rem;
 }
+
+.success-stories h2 {
+  color: black !important;
+}
+
 
 .events {
   background-image: url("./../img/backgrounds/news-and-events-bg.jpg");
+
+  height: 28.375rem;
 }
 
 #bsa:hover {
@@ -159,6 +188,18 @@ html{
   width: 20rem;
   height: 7rem;
 }
+
+.success-stories{
+  display: block;
+}
+
+.solution-links, .products_services-links, .company-links {
+  display: block;
+  width: 18rem;
+  float: left;
+}
+
 footer {
+  display: block;
   background-color: hsla(0,0,15%,1)
 }
