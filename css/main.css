@@ -8,6 +8,7 @@ html{
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 body {
   background-color: hsl(0, 0, 100%)
 }
@@ -16,32 +17,110 @@ body {
   width: 960px;
   /*margin: auto 20rem;*/
   margin: 0 auto; /* In order to put the container in the middle of the page - horizontal only*/
+  position: relative;
 }
 
-.navbar-logo {
-  float: left;
+.navbar {
+  display: inline-block;
+  height: 100px;
+  background-color: white;
 }
 
-.page-options li, .solution-links li, .products_services-links li, .company-links li{
+.navbar-headers li {
+  display: inline-block;
+}
+
+.pos-center {
+  display: inline-block;
+  position: relative;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
+
+.pos-right {
+  position: absolute;
+  right: 0px;
+  bottom: 10px;
+}
+
+.pos-left{
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
+}
+
+.page-options {
+  padding-bottom: 10px;
+}
+
+.navbar-headers a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 12px;
+}
+
+.navbar-headers img {
+  margin: 0 1rem;
+}
+
+.navbar-headers li, .page-options li, .solution-links li, .products_services-links li, .company-links li{
    list-style: none;
+}
+
+.inline-display li {
+  display: inline-block;
+  position: center;
 }
 
 .slider {
   display: block;
   color: white;
-  background-attachment:
+  width: 100%;
+  background-image: url("./../img/slider/custom-experience.jpg");
 }
-.search-Box {
-  display: block;
+
+input[type=serach] {
+  border: none;
+}
+
+.search-box {
+  width: 150px;
+  height: 22px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.search-field {
+  float: left;
+  width: 123px;
+  height: 20px;
+  margin: 0 0 0 2px;
+  padding: 0;
+  border: none;
+  font-size: 0.8rem;
+}
+
+input {
+  margin: 5px;
+}
+.submit {
+  background: url("./../img/icons/searchBtn.png");
+  background-repeat: no-repeat;
   float: right;
-  width: 5rem;
+  /*width: 18px;*/
+  /*height: px;*/
+  border: none;
 }
 
 #image_1 {
   background-image: url("./../img/slider/custom-experience.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* This will not work together with background-position: cover */
+  background-attachment: fixed; /* This will not work together with background-size: cover */
   /*width: 30rem;*/
 }
 
@@ -82,6 +161,9 @@ body {
   background-color: gray;
 }
 
+.boxes {
+  vertical-align: top;
+}
 .sPink {
   background-color: hsla(330,97%,63%,0.8);
 }
@@ -106,49 +188,13 @@ body {
   background-color: rgb(225, 116, 20);
 }
 
-.inline-display li {
-  display: inline-block;
-  position: center;
-}
-
-.navbar-logo {
-  float: left;
-}
-
-.navbar-headers a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: black;
-}
-
-.navbar-headers img {
-  margin: 0 1rem;
-}
-.solutions li a{
-  text-decoration: none;
-  color: white;
-}
-
-.solutions {
-  background-color: hsla(199,56%,49%,1);
-  background-image: url("./../img/backgrounds/solutions-bg.png");
-  
-  height: 26.5rem;
-}
-
-.solutions ul li {
-  width: 10rem;
-  margin: 2rem 0.5rem;
-  text-align: center;
-  align-items: center;
-}
-
 .medium-title {
   color: white;
   font-weight: 300;
   font-size: 2.5rem;
   text-align: center;
   margin-top: 0px;
+  padding-top: 62px;
 }
 
 .small-title {
@@ -175,29 +221,92 @@ body {
   height: 28.375rem;
 }
 
-#bsa:hover {
-  content: url("./../img/solutions/solution_icon_biz-analitics_hover.png");
+/**************************** Solutions ******************************/
+
+
+.solutions li a{
+  text-decoration: none;
+  color: white;
+  /*float: left;*/
 }
 
-#dce:hover {
-  content: url("./../img/solutions/solution_icon_diti-cx_hover.png");
+.solutions {
+  background-color: hsla(199,56%,49%,1);
+  background-image: url("./../img/backgrounds/solutions-bg.png");
+  height: 424px;
 }
 
-#sm:hover {
-  content: url("./../img/solutions/solution_icon_smart-money_hover.png");
+.solutions ul li {
+/*  width: 10rem;
+  margin: 2rem 0.5rem;
+  text-align: center;
+  align-items: center;*/
+  list-style: none;
 }
 
-#oae:hover {
-  content: url("./../img/solutions/solution_icon_optimize-efficnt_hover.png");
+.solutions ul {
+  padding: 0 0;
 }
 
-#pcc:hover {
-  content: url("./../img/solutions/solution_icon_personal_hover.png");
+.anchor-box {
+  float: left;
+  text-align: center;
+  width: 155px;
 }
 
-#bt:hover {
-  content: url("./../img/solutions/solution_icon_biz-transform_hover.png");
+.anchor-box p{
+  padding-top: 60px;
 }
+
+.bsa {
+  background: url("./../img/solutions/solution_icon_biz-analitics.png") no-repeat top center;
+}
+
+.bsa:hover {
+  background: url("./../img/solutions/solution_icon_biz-analitics_hover.png") no-repeat top center;
+}
+
+.dce {
+  background: url("./../img/solutions/solution_icon_diti-cx.png") no-repeat top center;
+}
+
+.dce:hover {
+  background: url("./../img/solutions/solution_icon_diti-cx_hover.png") no-repeat top center;
+}
+
+.sm {
+  background: url("./../img/solutions/solution_icon_smart-money.png") no-repeat top center;
+}
+
+.sm:hover {
+  background: url("./../img/solutions/solution_icon_smart-money_hover.png") no-repeat top center;
+}
+
+.oae {
+  background: url("./../img/solutions/solution_icon_optimize-efficnt.png") no-repeat top center;
+}
+
+.oae:hover{
+  background: url("./../img/solutions/solution_icon_optimize-efficnt_hover.png") no-repeat top center;
+}
+
+.pcc {
+  background: url("./../img/solutions/solution_icon_personal.png") no-repeat top center
+}
+
+.pcc:hover {
+  background: url("./../img/solutions/solution_icon_personal_hover.png") no-repeat top center;
+}
+
+.bt {
+  background: url("./../img/solutions/solution_icon_biz-transform.png") no-repeat top center;
+}
+
+.bt:hover {
+  background: url("./../img/solutions/solution_icon_biz-transform_hover.png") no-repeat top center;
+}
+
+/**************************** Events ******************************/
 
 .event-list {
   display: block;
