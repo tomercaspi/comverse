@@ -281,6 +281,10 @@ input {
   padding: 0 0;
 }
 
+.center {
+    display: block;
+    margin: 0 auto;
+}
 .anchor-box {
   float: left;
   text-align: center;
@@ -339,6 +343,11 @@ input {
   background: url("./../img/solutions/solution_icon_biz-transform_hover.png") no-repeat top center;
 }
 
+.solution-links, .products_services-links, .company-links {
+    display: block;
+    width: 18rem;
+    float: left;
+}
 
 /**************************** Events ******************************/
 
@@ -364,10 +373,56 @@ input {
     color: black;
 }
 
-.solution-links, .products_services-links, .company-links {
-  display: block;
-  width: 18rem;
-  float: left;
+.left-stories, .center-stories{
+    display: block;
+    width: 352.5px;
+    /*height: 350px;*/
+    border: 1px solid black;
+    float: left;
+    margin-right: 10px;
+}
+
+.right-stories{
+    display: block;
+    width: 235px;
+    /*height: 350px;*/
+    border: 1px solid black;
+    float: left;
+}
+
+.small-story, .large-story{
+    margin: 5px;
+    float: inherit;
+    display: block;
+    border: 1px solid red;
+}
+
+.left-stories .large-story, .center-stories .large-story{
+    width: 342px;
+    height: 208px;
+}
+
+.right-stories .large-story{
+    width: 225px;
+    height: 208px;;
+}
+
+.left-stories .small-story, .center-stories .small-story{
+    width: 106.8px;
+    height: 97px;
+}
+
+.right-stories .small-story{
+    width: 106.5px;;
+    height: 97px;
+}
+
+.left-stories .small-story:nth-child(4){
+    content: url("./../img/success-stories/mts_w108px_X_h95px.jpg");
+}
+
+.left-stories .small-story:nth-child(3){
+    content: url("./../img/success-stories/Tata_Sky_w108px_X_h95px.jpg");
 }
 
 footer {
