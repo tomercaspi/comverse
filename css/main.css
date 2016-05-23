@@ -10,16 +10,17 @@ html{
 }
 
 .container {
-  width: 960px;
-  /*margin: auto 20rem;*/
-  margin: 0 auto; /* In order to put the container in the middle of the page - horizontal only*/
-  position: relative;
+    width: 960px;
+    margin: 0 auto; /* In order to put the container in the middle of the page - horizontal only*/
+    position: relative;
 }
 
 .navbar {
-  display: inline-block;
+  display: block;
   height: 100px;
+  margin: 0 auto;
   background-color: white;
+  position: relative;
 }
 
 .navbar-headers li {
@@ -27,11 +28,9 @@ html{
 }
 
 .pos-center {
-  display: inline-block;
-  position: relative;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
+    /*display: inline-block;*/
+    float: left;
+    margin: 65px 0 0 185px;
 }
 
 .pos-right {
@@ -47,35 +46,48 @@ html{
 }
 
 .page-options {
-  padding-bottom: 10px;
+    padding-bottom: 25px;
+    font-family: Arial, sans-serif;
+}
+
+.page-options a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+.page-options a:hover{
+    text-decoration: underline;
+    /*color: #0000EE;*/
+}
+
+#lang_select {
+    border: none;
+    width: 41px;
+    font-size: 0.9rem;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+}
+.navbar-headers {
+    width: 625px;
 }
 
 .navbar-headers a {
     text-decoration: none;
     text-transform: uppercase;
     color: black;
-    font-size: 12px;
+    font-size: 0.9rem;
 }
 
 .navbar-headers img {
   margin: 0 1rem;
 }
 
-.navbar-headers li, .page-options li, .solution-links li, .products_services-links li, .company-links li{
+.navbar-headers li, .solution-links li, .slider > li .products_services-links li, .company-links li{
    list-style: none;
 }
 
-.inline-display li {
-  display: inline-block;
-  position: center;
-}
-
-.slider {
-  display: block;
-  color: white;
-  width: 100%;
-  background-image: url("./../img/slider/custom-experience.jpg");
-}
 
 input[type=serach] {
   border: none;
@@ -111,26 +123,36 @@ input {
   /*height: px;*/
   border: none;
 }
+/************************************************************************/
+/*********************************** Slider *****************************/
 
-#image_1 {
+
+.slider {
+    display: block;
+    color: white;
+    width: 100%;
+    /*background-image: url("./../img/slider/custom-experience.jpg");*/
+}
+
+.custom-experience {
   background-image: url("./../img/slider/custom-experience.jpg");
-  background-size: cover;
-  background-position: center;
+  /*background-size: cover;*/
+  /*background-position: center;*/
   background-attachment: fixed; /* This will not work together with background-size: cover */
   /*width: 30rem;*/
 }
 
-#image_2 {
+.digital-services {
   background-image: url("./../img/slider/digital-services.png");
   background-size: cover;
 }
 
-#image_3 {
+.evolve-to-ip4g {
   background-image: url("./../img/slider/evolve-to-ip4g.jpg");
   background-size: cover;
 }
 
-#image_4 {
+.smartly-monetize {
   background-image: url("./../img/slider/smartly-monetize.jpg");
   background-size: cover;
 }
@@ -138,13 +160,29 @@ input {
 .slider h1{
   font-size: 2rem;
 }
+.slider li:not(.custom-experience){
+    display: none;
+}
+.image-buttons:target ^ .slider > li{
+    display: block;
+}
+
+.btn-primary {
+    background-color: RGB(25,140,197);
+    color: white;
+    font-size: 0.9rem;
+    height: 40px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+}
 
 .slider-box {
   display: inline-block;
   border-radius: 6px;
-  width: 16.2rem;
-  height: 7.8rem;
-  margin: 4rem 3rem 2rem 0;
+  width: 290px;
+  height: 176px;
+  /*margin: 4rem 3rem 2rem 0;*/
   padding: 1rem;
   color: white;
 }
@@ -158,18 +196,32 @@ input {
 }
 
 .boxes {
+    margin: 0 auto;
+
+}
+.boxes section{
   vertical-align: top;
+}
+
+.anchor-box-style {
+    display:block;
+    vertical-align: bottom;
+    width: 115px;
 }
 .sPink {
   background-color: hsla(330,97%,63%,0.8);
+    margin: 10px 15px 10px 0;
 }
 
 .sPink:hover {
   background-color: rgb(250, 66, 158);
 }
-
+.sPink a:before{
+    content: url(./../img/icons/link-icon-image.png);
+}
 .sGreen {
   background-color: hsla(100,53%,50%,0.8);
+    margin: 10px 15px;
 }
 
 .sGreen:hover {
@@ -178,11 +230,15 @@ input {
 
 .sOrange {
   background-color: hsla(24,100%,55%,0.8);
+    margin: 10px 0 10px 15px;
 }
 
 .sOrange:hover {
   background-color: rgb(225, 116, 20);
 }
+
+/************************************************************************/
+/******************************* Solutions  *****************************/
 
 .medium-title {
   color: white;
@@ -201,29 +257,14 @@ input {
   /*text-align: left;*/
 }
 
-.success-stories {
-  background-color: rgb(236,236,236);
-  height: 35.75rem;
+
+.inline-display li {
+    display: inline-block;
 }
-
-.success-stories h2.medium-title {
-  color: black;
-}
-
-.events {
-  background-image: url("./../img/backgrounds/news-and-events-bg.jpg");
-  background-size: cover;
-  background-position: center; 
-  height: 28.375rem;
-}
-
-/**************************** Solutions ******************************/
-
 
 .solutions li a{
   text-decoration: none;
   color: white;
-  /*float: left;*/
 }
 
 .solutions {
@@ -233,10 +274,6 @@ input {
 }
 
 .solutions ul li {
-/*  width: 10rem;
-  margin: 2rem 0.5rem;
-  text-align: center;
-  align-items: center;*/
   list-style: none;
 }
 
@@ -302,16 +339,29 @@ input {
   background: url("./../img/solutions/solution_icon_biz-transform_hover.png") no-repeat top center;
 }
 
+
 /**************************** Events ******************************/
 
+.events {
+    background-image: url("./../img/backgrounds/news-and-events-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 28.375rem;
+}
 .event-list {
   display: block;
   width: 20rem;
   height: 7rem;
 }
 
-.success-stories{
-  display: block;
+.success-stories {
+    display: block;
+    background-color: rgb(236,236,236);
+    height: 35.75rem;
+}
+
+.success-stories h2.medium-title {
+    color: black;
 }
 
 .solution-links, .products_services-links, .company-links {
