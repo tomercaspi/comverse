@@ -9,6 +9,15 @@ html{
   box-sizing: inherit;
 }
 
+.clear-fix:before,
+.clear-fix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clear-fix:after {
+    clear: both;
+}
 .container {
     width: 960px;
     margin: 0 auto; /* In order to put the container in the middle of the page - horizontal only*/
@@ -179,12 +188,14 @@ input {
 
 .slider-box {
   display: inline-block;
-  border-radius: 6px;
-  width: 290px;
-  height: 176px;
-  /*margin: 4rem 3rem 2rem 0;*/
-  padding: 1rem;
-  color: white;
+    /*float: left;*/
+      border-radius: 6px;
+      width: 290px;
+      height: 176px;
+      padding: 0.7rem;
+      color: white;
+    z-index: 10;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 .button-slider {
@@ -195,19 +206,54 @@ input {
   background-color: gray;
 }
 
-.boxes {
+.boxes{
     margin: 0 auto;
-
 }
-.boxes section{
+
+/*.boxes section{
   vertical-align: top;
+}*/
+
+.boxes a{
+    font-weight: 600;
+    margin-left: 0;
+    bottom: 25px;
+    text-decoration: none;
+    vertical-align: top;
 }
 
 .anchor-box-style {
     display:block;
-    vertical-align: bottom;
+    /*vertical-align: bottom;*/
     width: 115px;
+    position: relative;
+    bottom: 20px;
+    left: 5px;
+    color: white;
 }
+
+
+.medium-title {
+    color: white;
+    font-weight: 300;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 62px;
+}
+
+.small-title {
+    color: white;
+    font-weight: 300;
+    font-size: 1.5rem;
+    height: 100%;
+    margin: 0;
+}
+
+.boxes .small-box {
+    line-height: 1.5rem;
+}
+
 .sPink {
   background-color: hsla(330,97%,63%,0.8);
     margin: 10px 15px 10px 0;
@@ -216,9 +262,7 @@ input {
 .sPink:hover {
   background-color: rgb(250, 66, 158);
 }
-.sPink a:before{
-    content: url(./../img/icons/link-icon-image.png);
-}
+
 .sGreen {
   background-color: hsla(100,53%,50%,0.8);
     margin: 10px 15px;
@@ -240,28 +284,6 @@ input {
 /************************************************************************/
 /******************************* Solutions  *****************************/
 
-.medium-title {
-  color: white;
-  font-weight: 300;
-  font-size: 2.5rem;
-  text-align: center;
-  margin-top: 0;
-  padding-top: 62px;
-}
-
-.small-title {
-  color: white;
-  font-weight: 300;
-  font-size: 1.3rem;
-  margin: 0 0 1rem 0;
-  /*text-align: left;*/
-}
-
-
-.inline-display li {
-    display: inline-block;
-}
-
 .solutions li a{
   text-decoration: none;
   color: white;
@@ -279,6 +301,7 @@ input {
 
 .solutions ul {
   padding: 0 0;
+    margin-bottom: 200px;
 }
 
 .center {
@@ -357,6 +380,11 @@ input {
     background-position: center;
     height: 28.375rem;
 }
+
+.inline-display li {
+    display: inline-block;
+}
+
 .event-list {
   display: block;
   width: 20rem;
