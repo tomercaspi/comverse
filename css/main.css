@@ -417,13 +417,15 @@ input {
     height: 97px;
 }
 
-.left-stories .small-story:nth-child(4){
-    content: url("./../img/success-stories/mts_w108px_X_h95px.jpg");
-}
-
 .left-stories .small-story:nth-child(3){
     content: url("./../img/success-stories/Tata_Sky_w108px_X_h95px.jpg");
 }
+
+.left-stories .small-story:nth-child(4){
+    content: url("./../img/success-stories/upc_w108px_X_h95px.jpg");
+}
+
+
 
 footer {
   display: block;
