@@ -3,6 +3,7 @@ html{
   font-size: 100%;
   font-weight: normal;
   box-sizing: border-box;
+    min-width: 960px;
 }
 
 *, *:before, *:after {
@@ -180,10 +181,39 @@ input {
     background-color: RGB(25,140,197);
     color: white;
     font-size: 0.9rem;
-    height: 40px;
-    width: auto;
+    height: 38px;
+    padding: 0 25px 0 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1px 12px 0 rgba(0,0,0,0.10)
+}
+
+.slider-button button {
+    height:35px;
+    width: 178px;
+    text-align: left;
+    padding-left: 12px;
+}
+
+.slider-button button:after {
+    left: 64px;
+}
+.btn-primary:after {
+    content: url("./../img/icons/btnArrow.png");
+    position: relative;
+    top: 2px;
+    right: -10px;
+}
+
+.btn-primary:hover{
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.20);
+    cursor: pointer;
+    transform: translateY(1px);
+}
+
+.btn-primary:active {
+    box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.20);
+    transform: translateY(3px);
 }
 
 .slider-box {
@@ -238,8 +268,8 @@ input {
     font-weight: 300;
     font-size: 2.5rem;
     text-align: center;
-    margin-top: 0;
-    padding-top: 62px;
+    margin: 0 auto;
+    padding-top: 60px;
 }
 
 .small-title {
@@ -372,13 +402,13 @@ input {
     float: left;
 }
 
-/**************************** Events ******************************/
+/********************************************** Events **********************************************/
 
 .events {
     background-image: url("./../img/backgrounds/news-and-events-bg.jpg");
     background-size: cover;
     background-position: center;
-    height: 28.375rem;
+    height: 454px;
 }
 
 .inline-display li {
@@ -391,10 +421,12 @@ input {
   height: 7rem;
 }
 
+/*************************************** Success Stories *******************************************/
+
 .success-stories {
     display: block;
     background-color: rgb(236,236,236);
-    height: 35.75rem;
+    height: 573px;
 }
 
 .success-stories h2.medium-title {
@@ -404,17 +436,23 @@ input {
 .left-stories, .center-stories{
     display: block;
     width: 352.5px;
-    /*height: 350px;*/
-    border: 1px solid black;
     float: left;
     margin-right: 10px;
+}
+
+.ss-main-section{
+    padding-top: 42px;
+    padding-bottom: 20px;
+}
+
+.ss-main-section img{
+    width: 100%;
+    height: 100%;
 }
 
 .right-stories{
     display: block;
     width: 235px;
-    /*height: 350px;*/
-    border: 1px solid black;
     float: left;
 }
 
@@ -445,15 +483,10 @@ input {
     height: 97px;
 }
 
-.left-stories .small-story:nth-child(3){
-    content: url("./../img/success-stories/Tata_Sky_w108px_X_h95px.jpg");
+.small-story a:hover {
+    background-image: url("./../img/success-stories/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg");
+    
 }
-
-.left-stories .small-story:nth-child(4){
-    content: url("./../img/success-stories/upc_w108px_X_h95px.jpg");
-}
-
-
 
 footer {
   display: block;
