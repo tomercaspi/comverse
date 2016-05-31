@@ -222,15 +222,24 @@ input {
   margin:0;
   padding-left: 0;
 }
-.back-image{
-  background-size: cover;
-  background-position: 25% 0;
+
+/*main article{
+  height: 560px;
+}*/
+
+.slider > li{
+  background-size: 200%;
+  background-position: 50% 0;
   background-attachment: fixed;
   height: 560px;
 }
 
+/*.back-image{
+
+}*/
+
 .custom-experience {
-  background: url("./../img/slider/custom-experience.jpg") no-repeat;
+  background: url("./../img/slider/custom-experience.jpg") fixed no-repeat;
 }
 
 .digital-services {
@@ -251,6 +260,7 @@ input {
 
 .slider h1 {
   font-size: 2rem;
+  margin: 0;
 }
 
 
@@ -320,16 +330,23 @@ input {
   display: inline-block;
   height: 10px;
   width: 10px;
-  border-radius: 5px;
-  background-color: gray;
+  border-radius: 2px;
+  border: 1px solid black;
+  background-color: #b0b0b0;
 }
 
-.boxes{
+/*.slider + article{
   position: relative;
-  bottom: 230px;
-  left: 0;
-  margin: 0 auto;
-  padding-bottom: 20px;
+}*/
+
+.boxes{
+  position: absolute;
+  bottom: 0px;
+  left: 27px;
+/*  bottom: 15px;
+  left: 210px;*/
+  /*margin: 0 auto;*/
+  padding-bottom: 30px;
 }
 
 .boxes a {
@@ -356,7 +373,8 @@ input {
   font-size: 2.5rem;
   text-align: center;
   margin: 0 auto;
-  padding-top: 60px;
+  /*padding-top: 60px;*/
+  padding: 60px 0 40px 0;
 }
 
 .small-title {
@@ -409,9 +427,9 @@ input {
 .solution-container{
   text-align: center;
 }
+
 .solutions {
   background-color: hsla(199, 56%, 49%, 1);
-  /*background-size: 100% 0;*/
   background-image: url("./../img/backgrounds/solutions-bg.png");
   height: 424px;
   padding: 20px 0;
@@ -423,6 +441,7 @@ input {
 
 .solutions ul {
   padding: 0 0;
+  display: inline-block;
 }
 
 .center {
@@ -646,17 +665,21 @@ h3 {
   position: relative;
 }
 
-.ss-main-section .large-story:nth-child(2){
+
+.switch .large-story:first-child{
   position: absolute;
 }
 
-.ss-main-section .large-story:nth-child(2):hover{
+.switch:hover .large-story:first-child{
   display:none;
 }
 
-.ss-main-section .large-story:first-child{
+.switch .large-story:nth-child(2){
   background-color: blue;
   color: white;
+  z-index: 20;
+  left: 0;
+  bottom: 0;
 }
 .name {
   position: absolute;
@@ -672,7 +695,7 @@ h3 {
 
 .small-story, .large-story {
   margin: 5px;
-  float: inherit;
+  float: left;
   display: block;
 }
 
