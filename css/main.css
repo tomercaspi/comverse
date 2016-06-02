@@ -221,6 +221,7 @@ input {
   width: 100%;
   margin: 0;
   padding-left: 0;
+  overflow: auto;
 }
 
 /*main article{
@@ -237,6 +238,7 @@ input {
 
 .custom-experience {
   background: url("./../img/slider/custom-experience.jpg") 50% 0 fixed no-repeat;
+  overflow: auto;
 }
 
 .digital-services {
@@ -624,6 +626,9 @@ h3 {
   display: block;
   position: absolute;
   z-index: 20;
+  transition: transform 500ms;
+  transform-origin: bottom center;
+  overflow: hidden;
 }
 
 .center-stories .large-story {
@@ -671,6 +676,7 @@ h3 {
   height: 213px;
   position: relative;
   z-index: 10;
+  padding: 23px;
 }
 
 .center-stories .large-story-back {
@@ -762,6 +768,7 @@ h3 {
 
 .switch:hover .large-story {
   display: none;
+  transform: translateY(-100%);
 }
 
 .small-story:hover img {
