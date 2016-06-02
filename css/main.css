@@ -99,7 +99,7 @@ html {
   text-align: center;
   line-height: 30px;
   text-decoration: none;
-  padding: 0 12.4px;
+  padding: 0 12px;
   /*width: 200px;*/
 }
 
@@ -206,8 +206,8 @@ input {
 }
 
 .submit {
-  background: url("./../img/icons/searchBtn.png");
-  background-repeat: no-repeat;
+  background: url("./../img/icons/searchBtn.png") no-repeat;
+  /*background-repeat: no-repeat;*/
   float: right;
   border: none;
 }
@@ -228,18 +228,15 @@ input {
 }*/
 
 .slider > li {
-  background-size: 200%;
+  /*background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;*/
+/*  background-size: 200%;
   background-position: 50% 0;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
   height: 560px;
 }
 
-/*.back-image{
-
-}*/
-
 .custom-experience {
-  background: url("./../img/slider/custom-experience.jpg") fixed no-repeat;
+  background: url("./../img/slider/custom-experience.jpg") 50% 0 fixed no-repeat;
 }
 
 .digital-services {
@@ -339,12 +336,9 @@ input {
 
 .boxes {
   position: absolute;
-  bottom: 0px;
+  bottom: 50px;
   left: 27px;
-  /*  bottom: 15px;
-    left: 210px;*/
-  /*margin: 0 auto;*/
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .boxes a {
@@ -357,7 +351,6 @@ input {
 
 .anchor-box-style {
   display: block;
-  /*vertical-align: bottom;*/
   width: 115px;
   position: relative;
   bottom: 20px;
@@ -427,8 +420,8 @@ input {
 }
 
 .solutions {
-  background-color: hsla(199, 56%, 49%, 1);
-  background-image: url("./../img/backgrounds/solutions-bg.png");
+  /*background-color: hsla(199, 56%, 49%, 1);*/
+  background: hsla(199, 56%, 49%, 1) url("./../img/backgrounds/solutions-bg.png");
   /*height: 424px;*/
   padding: 20px 0;
 }
@@ -514,9 +507,9 @@ input {
 /********************************************** Events **********************************************/
 
 .events {
-  background-image: url("./../img/backgrounds/news-and-events-bg.jpg");
-  background-size: cover;
-  background-position: center;
+  /*background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;*/
+  background: url("./../img/backgrounds/news-and-events-bg.jpg") 50%/cover fixed no-repeat;
+  /*background-size: cover;*/
   height: 454px;
 }
 
@@ -561,8 +554,29 @@ h3 {
 }
 
 .date-box {
-  position: absolute;
+  /*position: absolute;*/
+  width: 68px;
+  height: 98px;
   float: left;
+  font-size: 3rem;
+  text-align: center;
+  color: #ffffff;
+  margin-right: 10px;
+  line-height: 1.1;
+}
+
+.date-box span{
+  display: block;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.footer-section p.event-font{
+  padding: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .event-description {
@@ -613,7 +627,7 @@ h3 {
 }
 
 .center-stories .large-story {
-  position: absolute;
+  /*position: absolute;*/
   margin-top: 10px;
   top: 95px;
 }
@@ -652,7 +666,7 @@ h3 {
 .large-story-back {
   margin-right: 5px;
   display: inline-block;
-  background-color: blue;
+  background-color: #3AA6DB;
   color: #ffffff;
   height: 213px;
   position: relative;
@@ -694,7 +708,7 @@ h3 {
   margin: 5px 10px 15px 5px;
 }
 
-.switch blockquote:before, .switch blockquote:after {
+.large-story blockquote:before, .large-story blockquote:after {
   content: url("./../img/icons/quote-grey.png");
   margin-left: 5px;
 }
@@ -708,7 +722,6 @@ h3 {
 }
 
 .switch:hover .quote-blue blockquote:before, .switch:hover .quote-blue blockquote:after {
-  content: url("./../img/icons/quote-blue.png");
   margin-left: 5px;
 }
 
@@ -751,17 +764,10 @@ h3 {
   display: none;
 }
 
-.small-story img:nth-child(even) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-/* .small-story:hover img {
-  background-image: url("./../img/success-stories/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg");
+.small-story:hover img {
+  content: url("./../img/success-stories/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg");
   display: block;
-}  */
+}
 
 /*************************************** Footer ************************************/
 
@@ -787,9 +793,12 @@ footer {
   padding: 0;
 }
 
+.footer-links li{
+  list-style: none;
+}
+
 .footer-links li a {
   color: white;
-  list-style: none;
   text-decoration: none;
   font-size: 0.8rem;
 }
@@ -797,6 +806,10 @@ footer {
 .footer-section {
   background-color: rgba(133, 133, 133, 0.5);
   padding: 10px;
+}
+
+.footer-section a{
+  text-decoration: none;
 }
 
 footer aside {
