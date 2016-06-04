@@ -29,8 +29,9 @@ html {
 /******************************** Navbar and Mega Menu ****************************/
 
 .pos-center {
-  float: left;
-  margin: 65px 0 0 185px;
+  position: absolute;
+  bottom: 0;
+  left: 205px;
 }
 
 .pos-right {
@@ -72,14 +73,16 @@ html {
 
 .navbar {
   display: block;
-  height: 100px;
+  height: 85px;
   margin: 0 auto;
   background-color: white;
   position: relative;
 }
 
 .navbar > ul {
-  display: inline-block;
+  /*float: left;*/
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-headers > li {
@@ -92,91 +95,118 @@ html {
   width: 625px;
 }
 
-.navbar-headers li > a {
-  color: gray;
+/*.navbar-headers li{
+  position: relative;
+}*/
+
+.navbar-headers > li > a {
+  color: #000000;
   background: white;
   display: block;
   text-align: center;
-  line-height: 30px;
   text-decoration: none;
-  padding: 0 12px;
-  /*width: 200px;*/
+  padding: 5px 12px 7px;
+  /*font-size: 0.8rem;*/
 }
 
 .navbar-headers > li > a:hover,
 .navbar-headers > li > a:focus {
   background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: -10px 6px 10px -6px rgba(0,0,0,0.5);
+  border: 1px solid #b4b4b4;
+  border-bottom: 0;
+  color: rgb(2, 0, 217);
+  font-weight: 600;
+  z-index: 200;
 }
 
-.navbar-headers > li > a:visited {
+/*.navbar-headers > li:hover > a{
+  z-index: 200;
+}*/
+
+/*.navbar-headers > li > a:visited {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-}
+}*/
 
 .navbar-headers > li > ul {
-  /*border: 1px solid rgba(0, 0, 0, 0.2);*/
+  border: 1px solid #b4b4b4;
   border-top: none;
+  box-shadow: -10px 6px 10px -6px rgba(0,0,0,0.5);
   display: none;
   position: absolute;
-  top: 30px;
-  left: 0;
-  width: 100%;
+  width: 960px;
   list-style: none;
+  padding: 0;
+  background: #ffffff;
+  z-index: 200;
 }
 
-.navbar-headers ul a {
+.navbar-headers > li:nth-of-type(1) > ul{
+  top: 39px;
+  left: -225px;
+}
+
+.navbar-headers > li:nth-of-type(2) > ul{
+  top: 39px;
+  left: -348px;
+}
+
+.navbar-headers > li:nth-of-type(3) > ul{
+  top: 39px;
+  left: -495px;
+}
+
+.navbar-headers > li:nth-of-type(4) > ul{
+  top: 39px;
+  left: -633px;
+}
+
+.sub-menu ul a {
   list-style: none;
   text-decoration: none;
-  width: inherit;
-  color: gray;
+  color: black;
+  text-align: left;
+  font-weight: 500;
+  line-height: 1.5rem;
 }
 
-.navbar-headers ul a:hover,
-.navbar-headers ul a:focus {
-  color: blue;
+.sub-menu ul a:hover,
+.sub-menu ul a:focus{
+  text-decoration: underline;
+}
+
+.sub-menu .anchor-text a{
+  text-decoration: underline;
+  color: rgb(2, 0, 217);
 }
 
 .navbar-headers > li:hover > ul {
   display: block;
-  border: none;
-}
-
-.navbar-headers a {
-  /*text-decoration: none;*/
-  text-transform: uppercase;
-  /*color: black;*/
-  font-size: 0.9rem;
-}
-
-.navbar-headers img {
-  margin: 0 1rem;
 }
 
 .navbar-headers li, .solution-links li, .slider > li .products_services-links li, .company-links li {
   list-style: none;
 }
 
-.center-column {
-  display: inline-block;
-  float: left;
-}
-
-.right-column {
+.sub-menu ul{
   float: left;
   display: inline-block;
+  margin: 1rem 0;
+  padding-right: 2rem;
+  padding-left: 1rem;
 }
 
-.left-column {
+.sub-menu ul:last-child {
+  float: right;
+  padding-right: 30px;
+}
+
+.sub-menu ul:last-child li::before{
+  content: url("./../img/icons/line_divider_video.png");
   float: left;
-  display: inline-block;
+  padding-right: 30px;
 }
 
-.sub-menu-container {
-  border: 1px solid black;
-  margin: 0;
-  padding: 0;
-  width: 100%; /* this should be the width of the container */
-}
 
 input[type=serach] {
   border: none;
