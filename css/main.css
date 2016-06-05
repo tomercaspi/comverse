@@ -24,14 +24,15 @@ html {
   width: 960px;
   margin: 0 auto; /* In order to put the container in the middle of the page - horizontal only*/
   position: relative;
+  padding: 0;
 }
 
 /******************************** Navbar and Mega Menu ****************************/
 
 .pos-center {
   position: absolute;
-  bottom: 0;
-  left: 205px;
+  bottom: 4px;
+  left: 234px;
 }
 
 .pos-right {
@@ -54,7 +55,7 @@ html {
 .page-options a {
   text-decoration: none;
   color: inherit;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin-left: 5px;
 }
 
@@ -66,7 +67,7 @@ html {
 #lang_select {
   border: none;
   width: 41px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-family: Arial, sans-serif;
   display: inline-block;
 }
@@ -83,6 +84,7 @@ html {
   /*float: left;*/
   margin: 0;
   padding: 0;
+  height: 27px;
 }
 
 .navbar-headers > li {
@@ -92,7 +94,8 @@ html {
 }
 
 .navbar-headers {
-  width: 625px;
+  /*width: 625px;*/
+  width: 520px;
 }
 
 /*.navbar-headers li{
@@ -106,7 +109,7 @@ html {
   text-align: center;
   text-decoration: none;
   padding: 5px 12px 7px;
-  /*font-size: 0.8rem;*/
+  font-size: 14px;
 }
 
 .navbar-headers > li > a:hover,
@@ -117,6 +120,7 @@ html {
   border-bottom: 0;
   color: rgb(2, 0, 217);
   font-weight: 600;
+  padding: 5px 12px 10px;
   z-index: 200;
 }
 
@@ -138,27 +142,28 @@ html {
   list-style: none;
   padding: 0;
   background: #ffffff;
+  margin-top: 4px;
   z-index: 200;
 }
 
 .navbar-headers > li:nth-of-type(1) > ul{
-  top: 39px;
-  left: -225px;
+  top: 29px;
+  left: -231px;
 }
 
 .navbar-headers > li:nth-of-type(2) > ul{
-  top: 39px;
-  left: -348px;
+  top: 29px;
+  left: -340px;
 }
 
 .navbar-headers > li:nth-of-type(3) > ul{
-  top: 39px;
-  left: -495px;
+  top: 29px;
+  left: -473px;
 }
 
 .navbar-headers > li:nth-of-type(4) > ul{
-  top: 39px;
-  left: -633px;
+  top: 29px;
+  left: -597px;
 }
 
 .sub-menu ul a {
@@ -545,11 +550,10 @@ input {
   height: 454px;
 }
 
-.event-list {
-  display: block;
-  width: 20rem;
-  height: 7rem;
-}
+/*.event-list {
+  width: 320px;
+  height: 112px;
+}*/
 
 .inline-display li {
   float: left;
@@ -557,32 +561,56 @@ input {
   list-style: none;
 }
 
-.event-list article {
+.inline-display li:nth-child(2){
+  margin: 0 30px;
+}
+/*.event-list article {
   background-color: rgba(255, 255, 255, 0.5);
   height: 120px;
   width: 300px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}*/
+
+.event-list article a{
+  display: block;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 120px;
+  width: 300px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 3px;
+  color: #000;
+  text-decoration: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+.event-list article a:hover{
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-.inline-display li a {
+.event-list a:hover {
   text-decoration: none;
   color: #000;
 }
 
-.events li > a {
+.event-list section > a {
   position: relative;
-  top: 95px;
+  top: 10px;
   left: 0;
   color: #ffffff;
   font-size: 0.83rem;
+  text-decoration: none;
 }
 
-.events li > a i {
+.event-list section > a i {
   font-size: 1.3rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 32px;
+  font-weight: 400;
   color: #ffffff;
+  margin-bottom: 1rem;
 }
 
 .date-box {
@@ -593,26 +621,20 @@ h3 {
   font-size: 3rem;
   text-align: center;
   color: #ffffff;
+  background-color: rgb(51, 153, 204);
   margin-right: 10px;
-  line-height: 1.1;
 }
 
 .date-box span{
   display: block;
   padding: 0;
   font-size: 1.5rem;
-}
-
-.footer-section p.event-font{
-  padding: 5px;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-weight: 400;
+  border-top: 1px dotted #ffffff;
 }
 
 .event-description {
-  margin: 0 5px 0 30px;
+  margin: 0;
 }
 
 /*************************************** Success Stories *******************************************/
@@ -636,6 +658,11 @@ h3 {
   float: left;
   margin-right: 8px;
   position: relative;
+  /*overflow: hidden;*/
+}
+
+.left-stories{
+  /*overflow: hidden;*/
 }
 
 .right-stories {
@@ -658,7 +685,7 @@ h3 {
   z-index: 20;
   transition: transform 500ms;
   transform-origin: bottom center;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .center-stories .large-story {
@@ -687,6 +714,8 @@ h3 {
   float: left;
   display: block;
   z-index: 20;
+  transition: transform 500ms;
+  transform-origin: bottom center;
 }
 
 .center-stories .small-group {
@@ -707,6 +736,7 @@ h3 {
   position: relative;
   z-index: 10;
   padding: 23px;
+  /*overflow: hidden;*/
 }
 
 .center-stories .large-story-back {
@@ -757,7 +787,7 @@ h3 {
   font-family: sans-serif;
 }
 
-.switch:hover .quote-blue blockquote:before, .switch:hover .quote-blue blockquote:after {
+.switch:hover .large-story-back blockquote:before, .switch:hover .large-story-back blockquote:after {
   margin-left: 5px;
 }
 
@@ -797,13 +827,14 @@ h3 {
 }
 
 .switch:hover .large-story {
-  display: none;
+  /*display: none;*/
   transform: translateY(-100%);
 }
 
 .small-story:hover img {
   content: url("./../img/success-stories/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg");
   display: block;
+  transform: translateY(-100%);
 }
 
 /*************************************** Footer ************************************/
@@ -847,6 +878,14 @@ footer {
 
 .footer-section a{
   text-decoration: none;
+}
+
+.footer-section p.event-font{
+  padding: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 footer aside {
